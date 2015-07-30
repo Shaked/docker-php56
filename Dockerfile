@@ -22,11 +22,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN pear install PHP_CodeSniffer
 
 #Fetches a sample php.ini file with most configurations already good-to-go.
-RUN wget https://www.dropbox.com/s/v082gxag80neu7h/php.ini?dl=0 
-RUN mv /etc/php5/cli/php.ini /etc/php5/cli/php.ini.bak 
-RUN mv /etc/php5/apache2/php.ini /etc/php5/apache2/php.ini.bak 
-RUN cp php.ini\?dl\=0 /etc/php5/cli/php.ini 
-RUN cp php.ini\?dl\=0 /etc/php5/apache2/php.ini 
+RUN wget https://raw.githubusercontent.com/naroga/docker-php56/master/php.ini
+RUN rm -r /etc/php5/cli/php.ini
+RUN rm -r /etc/php5/apache2/php.ini
+RUN cp php.ini /etc/php5/cli/php.ini 
+RUN cp php.ini /etc/php5/apache2/php.ini 
 
 #Tests build
 RUN php -v
@@ -34,3 +34,4 @@ RUN phpunit --version
 RUN composer --version
 RUN phpcs --version
 RUN php -i | grep timezone
+RUN php -r "echo json_encode(get_loaded_extensions());"
