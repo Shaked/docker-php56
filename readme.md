@@ -17,7 +17,7 @@ this repository entirely and build from it.
 
 2.1) Downloading the Dockerfile
 
-Get the [Dockerfile][https://rawgithubusercontent.com/naroga/docker-php56/master/Dockerfile] here, and put it in a folder:
+Get the [Dockerfile](https://raw.githubusercontent.com/naroga/docker-php56/master/Dockerfile) here, and put it in a folder:
 
     mkdir naroga-php-56
     cd naroga-php-56
