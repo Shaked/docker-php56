@@ -17,7 +17,7 @@ this repository entirely and build from it.
 
 2.1) Downloading the Dockerfile
 
-Get the [Dockerfile][1] here, and put it in a folder:
+Get the [Dockerfile][https://rawgithubusercontent.com/naroga/docker-php56/master/Dockerfile] here, and put it in a folder:
 
     mkdir naroga-php-56
     cd naroga-php-56
@@ -48,5 +48,3 @@ The previous snippet should display:
    PHP 5.6.4-ubuntu6.2 (cli) ...
 
 If a newer version is displayed, don't worry. This image always installs the latest stable distribution.
-
-  [1] : https://rawgithubusercontent.com/naroga/docker-php56/master/Dockerfile
