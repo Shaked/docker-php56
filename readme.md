@@ -42,6 +42,6 @@ To test if everything's working, run
 
 The previous snippet should display:
 
-   PHP 5.6.4-ubuntu6.2 (cli) ...
+    PHP 5.6.4-ubuntu6.2 (cli) ...
 
 If a newer version is displayed, don't worry. This image always installs the latest stable distribution.
