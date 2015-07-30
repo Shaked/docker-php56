@@ -2,15 +2,13 @@ naroga/php56
 ============
 
 Installing this image
-=====================
+---------------------
 
-1) Pulling from the hub (recommended)
--------------------------------------
+**1) Pulling from the hub (recommended)**
 
 To pull the latest version from image from the hub, just execute `docker pull naroga/php56`.
 
-2) Building from the Dockerfile
--------------------------------
+**2) Building from the Dockerfile**
 
 To build from the Dockerfile, you can download the raw Dockerfile from this repository, or you can clone
 this repository entirely and build from it.
@@ -35,8 +33,7 @@ Now, build the image from the cloned folder:
     cd naroga-php-56
     docker build -t naroga/php56 .
 
-3) Running a job
-----------------
+**3) Running a job**
 
 To test if everything's working, run
     
