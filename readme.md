@@ -65,3 +65,8 @@ Packages: curl, pear, wget, git, composer, phpunit, phpcs, memcached, mysql.
 All packages are available from anywhere in the command line, i.e. `composer --version`, `phpunit --version`, `phpcs --version`. This is meant to help test projects without needing to add these packages as vendors in the `require-dev` section of `composer.json`.
 
 This build brings a php.ini with most troublesome configuration already fixed (you will not get warnings for a missing default `date.timezone`, for example).
+
+MySQL Server
+------------
+
+Running on default port (3306). User: "root" (no quotes). Password: "root" (no quotes).

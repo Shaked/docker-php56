@@ -8,7 +8,7 @@ RUN apt-get update -y
 RUN apt-get install -y php5 php5-mysql php5-curl php5-intl php5-memcached php5-apcu
 
 #Installs curl, pear, wget, git, memcached and mysql-server
-RUN apt-get install -y curl php-pear wget git memcached mysql-server
+RUN apt-get install -y curl php-pear wget git memcached
 
 #Installs PHPUnit
 RUN wget https://phar.phpunit.de/phpunit.phar 
@@ -27,6 +27,11 @@ RUN rm -r /etc/php5/cli/php.ini
 RUN rm -r /etc/php5/apache2/php.ini
 RUN cp php.ini /etc/php5/cli/php.ini 
 RUN cp php.ini /etc/php5/apache2/php.ini 
+
+#Installing MySQL Server
+RUN echo "mysql-server mysql-server/root_password password root" | debconf-set-selections
+RUN echo "mysql-server mysql-server/root_password_again password root" | debconf-set-selections
+RUN apt-get install -y mysql-server
 
 #Tests build
 RUN php -v
