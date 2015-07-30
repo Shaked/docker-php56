@@ -33,7 +33,8 @@ Now, build the image from the cloned folder:
     cd naroga-php-56
     docker build -t naroga/php56 .
 
-**3) Running a job**
+Running a job
+-------------
 
 To test if everything's working, run
     
@@ -45,3 +46,22 @@ The previous snippet should display:
     PHP 5.6.4-ubuntu6.2 (cli) ...
 
 If a newer version is displayed, don't worry. This image always installs the latest stable distribution.
+
+Features
+--------
+
+OS: Ubuntu 15.04
+
+PHP 5.6.4-ubuntu6.2
+
+Apache 2.4.10, running on port 80.
+
+Default extensions: "Core", "date","ereg","libxml","openssl","pcre","zlib","bcmath","bz2","calendar","ctype","dba","dom","hash","fileinfo","filter","ftp","gettext","SPL","iconv","mbstring","pcntl","session","posix","Reflection","standard","shmop","SimpleXML","soap","sockets","Phar","exif","sysvmsg","sysvsem","sysvshm","tokenizer","wddx","xml","xmlreader","xmlwriter","zip","json","readline","mhash", "Zend OPcache".
+
+Additional extensions: "curl","intl", "apc", "apcu", "memcached","mysql","mysqli","pdo_mysql", "PDO".
+
+Packages: curl, pear, wget, git, composer, phpunit, phpcs, memcached.
+
+All packages are available from anywhere in the command line, i.e. `composer --version`, `phpunit --version`, `phpcs --version`. This is meant to help test projects without needing to add these packages as vendors in the `require-dev` section of `composer.json`.
+
+This build brings a php.ini with most troublesome configuration already fixed (you will not get warnings for a missing default `date.timezone`, for example).

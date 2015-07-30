@@ -7,11 +7,11 @@ RUN apt-get update -y
 #Installs PHP5.6, some extensions and apcu.
 RUN apt-get install -y php5 php5-mysql php5-curl php5-intl php5-memcached php5-apcu
 
-#Installs curl, pear and wget
-RUN apt-get install -y curl php-pear wget git
+#Installs curl, pear, wget, git and memcached
+RUN apt-get install -y curl php-pear wget git memcached
 
 #Installs PHPUnit
-RUN wget https://phar.phpunit.de/phpunit.phar 
+RUN wget https://phar.phpunidockt.de/phpunit.phar 
 RUN chmod +x phpunit.phar 
 RUN mv phpunit.phar /usr/local/bin/phpunit
 
