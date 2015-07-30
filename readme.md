@@ -60,7 +60,7 @@ Default extensions: "Core", "date","ereg","libxml","openssl","pcre","zlib","bcma
 
 Additional extensions: "curl","intl", "apc", "apcu", "memcached","mysql","mysqli","pdo_mysql", "PDO".
 
-Packages: curl, pear, wget, git, composer, phpunit, phpcs, memcached.
+Packages: curl, pear, wget, git, composer, phpunit, phpcs, memcached, mysql.
 
 All packages are available from anywhere in the command line, i.e. `composer --version`, `phpunit --version`, `phpcs --version`. This is meant to help test projects without needing to add these packages as vendors in the `require-dev` section of `composer.json`.
 
