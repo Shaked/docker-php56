@@ -8,7 +8,7 @@ RUN apt-get update -y
 RUN apt-get install -y php5 php5-mysql php5-curl php5-intl php5-memcached php5-apcu
 
 #Installs curl, pear and wget
-RUN apt-get install -y curl php-pear wget
+RUN apt-get install -y curl php-pear wget git
 
 #Installs PHPUnit
 RUN wget https://phar.phpunit.de/phpunit.phar 
